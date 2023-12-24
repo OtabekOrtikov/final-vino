@@ -1,0 +1,33 @@
+@media screen and (max-width: 768px) {
+    .main {
+        &-about {
+            &__article {
+                justify-content: center;
+                align-self: start;
+                &-item {
+                    padding: 0 27px;
+                    &:first-child {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+        &-hero {
+            &__title {
+                font-size: 37px;
+            }
+            &__p {
+                max-width: 378px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .main {
+        &-about {
+            &__article {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
