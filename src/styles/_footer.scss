@@ -19,6 +19,7 @@
             color: $light-grey;
 
             @include font-type("Source Sans Pro", 16px, 400, normal);
+            @include flex-box(column, center, flex-start, nowrap);
 
             p {
                 margin-bottom: 27px;

@@ -1,6 +1,10 @@
 @media screen and (max-width: 768px) {
     .main {
         &-about {
+            &__title {
+                margin: 0 auto 50px;
+                max-width: 440px;
+            }
             &__article {
                 justify-content: center;
                 align-self: start;

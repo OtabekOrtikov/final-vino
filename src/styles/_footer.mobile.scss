@@ -7,8 +7,10 @@
             align-items: center;
             justify-content: center;
             row-gap: 15px;
+            text-align: center;
             &__address {
                 order: 2;
+                align-items: center;
                 p {
                     margin-bottom: 14px;
                     &:last-child {
