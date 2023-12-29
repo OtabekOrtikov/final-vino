@@ -14,18 +14,17 @@
         <section class="header-top">
             <nav class="header-top__nav">
                 <h1 class="header-top__nav-logo">Projects</h1>
-                <input type="checkbox" id="burger-btn">
-                <label class="header-top__nav-burger" for="burger-btn">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </label>
                 <ul class="header-top__nav-menu" id="navbar">
                     <li class="header-top__nav-menu-item"><a href="#">Project</a></li>
                     <li class="header-top__nav-menu-item"><a href="#">About Us</a></li>
                     <li class="header-top__nav-menu-item"><a href="#">Stories</a></li>
                     <li class="header-top__nav-menu-item"><a href="#">Contact</a></li>
                 </ul>
+                <div class="header-top__nav-burger" id="burger-btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </nav>
         </section>
         <section class="header-container">
@@ -69,5 +68,20 @@
         </div>
     </footer>
     <!-- 01001111 01110100 01100001 01100010 01100101 01101011 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            const nav = $("#navbar");
+            const btn = $("#burger-btn");
+
+            if($(window).width() <= 768) {
+                btn.click(function(){
+                    nav.toggleClass("active");
+                });
+            } else {
+                nav.removeClass("active");
+            }
+        });
+    </script>
 </body>
 </html>
