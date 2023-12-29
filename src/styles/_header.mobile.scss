@@ -1,0 +1,42 @@
+@media screen and (max-width: 768px) {
+    .header {
+        background-position: 20%;
+        &-top {
+            &__nav {
+                &-menu {
+                    order: 3;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 100%;
+                    right: 30px;
+                    display: none;
+                    &.active {
+                        display: flex;
+                    }
+                }
+                &-burger {
+                    order: 2;
+                    opacity: 1;
+                }
+                #burger-btn {
+                    &:checked ~ #navbar {
+                        display: flex;
+                    }
+                }
+            }
+        }
+        &-container {
+            padding: 0;
+            max-width: 332px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .header {
+        &-container {
+            margin: 0 auto;
+        }
+    }
+}

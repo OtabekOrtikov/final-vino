@@ -1,0 +1,137 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left 30%;
+    background-image: url('../../assets/header-bg.jpg');
+
+    &-top {
+        padding: 26px 0;
+        width: 100%;
+        position: absolute;
+    
+        @include flex-box(row, center, center, nowrap);
+    
+        &__nav {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            padding: 0 10vw;
+            
+            @include flex-box(row, space-between, center, nowrap);
+            
+            &-logo {
+                order: 1;
+                color: $white;
+                width: 100px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+    
+                @include font-type("Source Sans Pro", 20px, 600, normal);
+            }
+            #burger-btn {
+                display: none;
+            }
+            &-menu {
+                order: 2;
+                @include flex-box(row, space-between, center, wrap);
+                
+                &-item {
+                    color: $white;
+                    margin: 0 16px;
+                    padding-bottom: 6px;
+                    letter-spacing: 2.8px;
+                    list-style-type: none;
+                    text-transform: uppercase;
+                    border-bottom: 2px solid transparent;
+    
+                    @include font-type("Source Sans Pro", 14px, 400, normal);
+                    &:hover {
+                        font-weight: 700;
+                        letter-spacing: 2.65px;
+                        border-bottom: 2px solid $white;
+                    }
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+            &-burger {
+                order: 3;
+                max-width: 91px;
+                width: 100%;
+                height: auto;
+                opacity: 0;
+                
+                @include flex-box(column, center, flex-end, nowrap);
+    
+                div {
+                    height: 3px;
+                    width: 23px;
+                    margin: 3px 0;   
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    &-container {
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        max-width: 965px;
+        @include flex-box(column, center, flex-end, nowrap);
+        
+        &__main {
+            margin-top: 30px;
+            max-width: 440px;
+            text-align: center;
+            @include flex-box(column, center, center, nowrap);
+
+            &-img {
+                width: 100%;
+                height: 100%;
+                max-width: 133px;
+                max-height: 135px;
+                margin-bottom: 22px;
+                
+                @include animation(zoom-rotate, 2.5s, ease-in, infinite);
+            }
+            &-title {
+                color: $white;
+                line-height: 72px;
+                margin-bottom: 32px;
+
+                @include font-type("Sail", 68px, 400, normal);
+            }
+            &-p {
+                color: $white;
+                line-height: 32px;
+
+                @include font-type("Source Sans Pro", 24px, 400, normal);
+            }
+        }
+    }
+}
+
+
+
+@keyframes zoom-rotate {
+    from {
+        transform: rotateY(0) scale(1);
+    }
+    25% {
+        transform: rotateY(0) scale(1);
+    }
+    50% {
+        transform: rotateY(180deg) scale(1.2);
+    }
+    75% {
+        transform: rotateY(180deg) scale(1.2);
+    }
+    to {
+        transform: rotateY(360deg) scale(1);
+    }
+}
