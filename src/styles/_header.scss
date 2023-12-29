@@ -31,9 +31,6 @@
     
                 @include font-type("Source Sans Pro", 20px, 600, normal);
             }
-            #burger-btn {
-                display: none;
-            }
             &-menu {
                 order: 2;
                 @include flex-box(row, space-between, center, wrap);

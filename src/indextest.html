@@ -14,17 +14,17 @@
         <section class="header-top">
             <nav class="header-top__nav">
                 <h1 class="header-top__nav-logo">Projects</h1>
+                <div class="header-top__nav-burger" id="burger-btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
                 <ul class="header-top__nav-menu" id="navbar">
                     <li class="header-top__nav-menu-item"><a href="#">Project</a></li>
                     <li class="header-top__nav-menu-item"><a href="#">About Us</a></li>
                     <li class="header-top__nav-menu-item"><a href="#">Stories</a></li>
                     <li class="header-top__nav-menu-item"><a href="#">Contact</a></li>
                 </ul>
-                <div class="header-top__nav-burger" id="burger-btn">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
             </nav>
         </section>
         <section class="header-container">
@@ -78,8 +78,6 @@
                 btn.click(function(){
                     nav.toggleClass("active");
                 });
-            } else {
-                nav.removeClass("active");
             }
         });
     </script>
