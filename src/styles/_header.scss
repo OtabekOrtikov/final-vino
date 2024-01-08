@@ -55,12 +55,16 @@
                     }
                 }
             }
+            #burger-btn {
+                display: none;
+            }
             &-burger {
                 order: 3;
                 max-width: 91px;
                 width: 100%;
                 height: auto;
                 opacity: 0;
+                cursor: pointer;
                 
                 @include flex-box(column, center, flex-end, nowrap);
     
