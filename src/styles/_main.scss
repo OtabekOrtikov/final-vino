@@ -34,10 +34,12 @@
             @include flex-box(row, space-between, flex-start, nowrap);
 
             &-item {
-                color: $dark-grey;
-                line-height: 22px;
+                h6 {
+                    color: $dark-grey;
+                    line-height: 22px;
 
-                @include font-type("Source Sans Pro", 16px, 400, normal);
+                    @include font-type("Source Sans Pro", 16px, 400, normal);
+                }
 
                 &:nth-child(1) {
                     width: 100%;
