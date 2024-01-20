@@ -1,79 +1,78 @@
 .footer {
-    padding: 35px 0;
-    background-color: $black;
+  padding: 35px 0;
+  background-color: $black;
 
-    @include flex-box(row, center, center, wrap);
+  @include flex-box(row, center, center, wrap);
 
-    &-container {
-        width: 100%;
-        max-width: 965px;
-        display: grid;
-        grid-template-columns: 225px 225px 225px;
-        justify-content: space-between;
+  &-container {
+    width: 100%;
+    max-width: 965px;
+    display: grid;
+    grid-template-columns: 225px 225px 225px;
+    justify-content: space-between;
 
-        &__address {
-            order: 1;
-            width: 100%;
-            max-width: 225px;
-            line-height: 19px;
-            color: $light-grey;
+    &__address {
+      order: 1;
+      width: 100%;
+      max-width: 225px;
+      line-height: 19px;
+      color: $light-grey;
 
-            @include font-type("Source Sans Pro", 16px, 400, normal);
-            @include flex-box(column, center, flex-start, nowrap);
+      @include font-type('Source Sans Pro', 16px, 400, normal);
+      @include flex-box(column, center, flex-start, nowrap);
 
-            p {
-                margin-bottom: 27px;
+      p {
+        margin-bottom: 27px;
 
-                a {
-                    color: $light-grey;
+        a {
+          color: $light-grey;
 
-                    &:hover {
-                        color: $white;
-                    }
-                }
-            }
-
+          &:hover {
+            color: $white;
+          }
         }
-        &__logo {
-            order: 2;
-            width: 100%;
-            max-width: 225px;
-            text-align: center;
-            img {
-                width: 100%;
-                height: 100%;
-                max-width: 92px;
-                max-height: 93px;
-                margin-bottom: 22px;
-
-                @include animation(zoom-rotate, 3s, ease, infinite);
-            }
-            h3 {
-                color: $white;
-                line-height: 16px;
-                letter-spacing: 3.6px;
-                text-transform: uppercase;
-
-                @include font-type("Source Sans Pro", 18px, 400, normal);
-            }
-        }
-        &__copyright {
-            order: 3;
-            width: 100%;
-            max-width: 225px;
-
-            @include flex-box(row, flex-end, flex-end, nowrap);
-
-            p {
-                color: $light-grey;
-                line-height: 19px; 
-
-                @include font-type("Source Sans Pro", 16px, 400, normal);
-
-                span {
-                    text-transform: capitalize;
-                }
-            }
-        }
+      }
     }
+    &__logo {
+      order: 2;
+      width: 100%;
+      max-width: 225px;
+      text-align: center;
+      img {
+        width: 100%;
+        height: 100%;
+        max-width: 92px;
+        max-height: 93px;
+        margin-bottom: 22px;
+
+        @include animation(zoom-rotate, 3s, ease, infinite);
+      }
+      h3 {
+        color: $white;
+        line-height: 16px;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+
+        @include font-type('Source Sans Pro', 18px, 400, normal);
+      }
+    }
+    &__copyright {
+      order: 3;
+      width: 100%;
+      max-width: 225px;
+
+      @include flex-box(row, flex-end, flex-end, nowrap);
+
+      p {
+        color: $light-grey;
+        line-height: 19px;
+
+        @include font-type('Source Sans Pro', 16px, 400, normal);
+
+        span {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
 }

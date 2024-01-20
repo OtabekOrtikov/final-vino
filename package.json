@@ -2,12 +2,12 @@
   "scripts": {
     "test": "jest --reporters=jest-junit",
     "build": "echo \"Dummy build script for Autocode\"",
-    "compile": "node-sass src/styles/styles.scss src/styles/dist/styles.css",
-    "prefixer": "npx postcss src/styles/dist/styles.css -o src/styles/dist/styles.css",
-    "unused": "purgecss --css src/styles/dist/styles.css --content src/index.html",
-    "minify": "postcss src/styles/dist/styles.css -o src/styles/dist/styles.min.css --use autoprefixer cssnano",
-    "lint": "stylelint ./src/styles/*.scss --fix && stylelint ./src/styles/*.scss",
-    "prettier": "prettier --write \"src/styles/dist/styles.css\"",
+    "compile": "node-sass src/styles/style.scss src/styles/dist/style.css",
+    "prefixer": "npx postcss src/styles/dist/style.css -o src/styles/dist/style.css",
+    "unused": "purgecss --css src/styles/dist/style.css --content src/index.html",
+    "minify": "postcss src/styles/dist/style.css -o src/styles/dist/style.min.css --use autoprefixer cssnano",
+    "lint": "stylelint ./src/styles/*.scss",
+    "prettier": "prettier --write ./src/styles/*.scss && prettier --check ./src/styles/*.scss && prettier --write \"src/styles/dist/style.css\"",
     "prod": "npm run lint && npm run compile && npm run prefixer && npm run unused && npm run prettier && npm run minify"
   },
   "devDependencies": {
@@ -39,5 +39,15 @@
     "fs": "^0.0.1-security",
     "node-sass": "^9.0.0",
     "purgecss": "^5.0.0"
-  }
+  },
+  "name": "final",
+  "description": "1. Please, place all your `SCSS` styles in `src/styles` folder.\r 2. The `package.json` file is already created, please don't delete NPM scripts that are already there. This file should look like this when you initiate the project:",
+  "version": "1.0.0",
+  "main": "babel.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
