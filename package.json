@@ -4,7 +4,7 @@
     "build": "echo \"Dummy build script for Autocode\"",
     "compile": "node-sass src/styles/style.scss src/dist/style.css",
     "prefix": "npx postcss src/dist/style.css -o src/dist/style.css",
-    "min": "postcss src/dist/style.css -o src/dist/styles.min.css --use autoprefixer cssnano",
+    "min": "postcss src/dist/style.css -o src/dist/style.min.css --use autoprefixer cssnano",
     "unused": "purgecss --css src/dist/style.css --content src/index.html",
     "lint": "stylelint ./src/styles/*.scss --fix && stylelint ./src/styles/*.scss",
     "prettier": "prettier --write src/styles/*.scss && prettier --write \"src/dist/style.css\"",
@@ -54,5 +54,6 @@
   "repository": {
     "type": "git",
     "url": "https://autocode.git.epam.com/otabek_ortikov/final.git"
-  }
+  },
+  "keywords": []
 }
