@@ -4,12 +4,12 @@
     "build": "echo \"Dummy build script for Autocode\"",
     "compile": "node-sass src/styles/style.scss src/dist/style.css",
     "prefix": "npx postcss src/dist/style.css -o src/dist/style.css",
-    "min": "postcss src/dist/style.css -o src/dist/style.min.css --use autoprefixer cssnano",
+    "min": "postcss src/dist/style.css -o src/dist/style.min.css",
     "unused": "purgecss --css src/dist/style.css --content src/index.html",
     "lint": "stylelint ./src/styles/*.scss --fix && stylelint ./src/styles/*.scss",
     "prettier": "prettier --write src/styles/*.scss && prettier --write \"src/dist/style.css\"",
     "success": "echo \"All tasks are completed.\"",
-    "prod": "npm run lint && npm run compile && npm run prefix && npm run unused && npm run prettier && postcss src/dist/style.css -o src/dist/style.min.css && npm run success"
+    "prod": "npm run lint && npm run compile && npm run prefix && npm run unused && npm run prettier && npm run min && npm run success"
   },
   "devDependencies": {
     "@babel/core": "^7.23.5",
